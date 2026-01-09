@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvya Tech - Loading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader-container {
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            animation: logoAnimation 3s ease-in-out infinite;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+        }
+
+        .company-name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInUp 2s ease-out 1s forwards;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .loading-text {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeInUp 2s ease-out 1.5s forwards;
+        }
+
+        .progress-bar {
+            width: 300px;
+            height: 4px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 2px;
+            margin: 30px auto 0;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInUp 2s ease-out 2s forwards;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00d4ff, #ffffff);
+            border-radius: 2px;
+            animation: progressFill 3s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(0,212,255,0.5);
+        }
+
+        @keyframes logoAnimation {
+            0% {
+                transform: scale(0.8) translateX(-50px);
+                opacity: 0.7;
+            }
+            50% {
+                transform: scale(1.2) translateX(25px);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0.8) translateX(-50px);
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes progressFill {
+            0% {
+                width: 0%;
+                transform: translateX(-100%);
+            }
+            50% {
+                width: 100%;
+                transform: translateX(0%);
+            }
+            100% {
+                width: 0%;
+                transform: translateX(100%);
+            }
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 2s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 0.5s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 1.5s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 0.8s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 1.8s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 2.8s; }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(90vh) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: translateY(-10vh) scale(1);
+            }
+        }
+
+        .glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(0,212,255,0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="loader-container">
+        <div class="glow"></div>
+        <img src="Logos/Arvya__Logo-removebg-preview.png" alt="Arvya Tech Logo" class="logo">
+        <div class="company-name">Arvya Tech</div>
+        <div class="loading-text">Loading Excellence...</div>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+    </div>
+
+    <script>
+        // Auto redirect after 5 seconds
+        setTimeout(() => {
+            window.location.href = 'homepage.html';
+        }, 5000);
+    </script>
+</body>
+</html>

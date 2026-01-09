@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvya Tech - Page Title</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="CSS/loader.css" as="style">
+    <link rel="preload" href="js/loader.js" as="script">
+    
+    <!-- CSS Files -->
+    <link href="CSS/loader.css" rel="stylesheet">
+    <link href="CSS/main.css" rel="stylesheet">
+    
+    <!-- Loader Script (inline for immediate execution) -->
+    <script>
+        // Immediate loader creation to prevent flash
+        document.documentElement.style.overflow = 'hidden';
+    </script>
+</head>
+<body>
+    <!-- Page content goes here -->
+    
+    <!-- Scripts -->
+    <script src="js/loader.js"></script>
+    <script>
+        // Re-enable scrolling after loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.documentElement.style.overflow = '';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

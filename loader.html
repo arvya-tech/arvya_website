@@ -1,0 +1,98 @@
+<html lang="en">
+    <!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvya Tech - Loading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .loader {
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            animation: logoMove 2s ease-in-out infinite;
+            margin-bottom: 30px;
+        }
+
+        .text {
+            color: #1E40AF;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .progress {
+            width: 200px;
+            height: 4px;
+            background: rgba(30,64,175,0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: #1E40AF;
+            animation: loading 3s ease-in-out infinite;
+        }
+
+        @keyframes logoMove {
+            0% {
+                transform: scale(0.8) translateX(-30px);
+            }
+            50% {
+                transform: scale(1.2) translateX(30px);
+            }
+            100% {
+                transform: scale(0.8) translateX(-30px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes loading {
+            0% { width: 0%; }
+            50% { width: 100%; }
+            100% { width: 0%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <img src="Logos/Arvya_Logo.png" alt="Arvya Tech Logo" class="logo">
+        <div class="text">Arvya Tech</div>
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = 'homepage.html';
+        }, 4000);
+    </script>
+</body>
+</html>

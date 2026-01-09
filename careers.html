@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Arvya Tech Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/main.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: white;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Navigation Styles */
+        .sticky { position: sticky; }
+        .top-0 { top: 0; }
+        .z-50 { z-index: 50; }
+        .backdrop-blur-sm { backdrop-filter: blur(4px); }
+        .border-b { border-bottom-width: 1px; }
+        .border-slate-200 { border-color: #e2e8f0; }
+        .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .h-20 { height: 5rem; }
+        .absolute { position: absolute; }
+        .left-0 { left: 0; }
+        .right-4 { right: 1rem; }
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-8 { gap: 2rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-12 { gap: 3rem; }
+        .w-10 { width: 2.5rem; }
+        .h-10 { height: 2.5rem; }
+        .w-6 { width: 1.5rem; }
+        .h-6 { height: 1.5rem; }
+        .w-5 { width: 1.25rem; }
+        .h-5 { height: 1.25rem; }
+        .text-xl { font-size: 1.25rem; }
+        .text-lg { font-size: 1.125rem; }
+        .text-sm { font-size: 0.875rem; }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        .text-gray-900 { color: #111827; }
+        .text-gray-600 { color: #4b5563; }
+        .text-gray-300 { color: #d1d5db; }
+        .text-gray-400 { color: #9ca3af; }
+        .text-gray-800 { color: #1f2937; }
+        .text-blue-600 { color: #2563eb; }
+        .text-blue-400 { color: #60a5fa; }
+        .text-white { color: white; }
+        .bg-white\/95 { background-color: rgba(255, 255, 255, 0.95); }
+        .bg-gray-100 { background-color: #f3f4f6; }
+        .bg-gray-800 { background-color: #1f2937; }
+        .bg-gray-900 { background-color: #111827; }
+        .bg-blue-50 { background-color: #eff6ff; }
+        .bg-blue-600 { background-color: #2563eb; }
+        .hover\:text-blue-600:hover { color: #2563eb; }
+        .hover\:bg-gray-100:hover { background-color: #f3f4f6; }
+        .hover\:bg-blue-600:hover { background-color: #2563eb; }
+        .hover\:text-white:hover { color: white; }
+        .transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+        .transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+        .duration-300 { transition-duration: 300ms; }
+        .group:hover .group-hover\:scale-110 { transform: scale(1.1); }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .p-2 { padding: 0.5rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .pb-4 { padding-bottom: 1rem; }
+        .pt-8 { padding-top: 2rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-12 { margin-bottom: 3rem; }
+        .mt-1 { margin-top: 0.25rem; }
+        .hidden { display: none; }
+        .grid { display: grid; }
+        .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .flex-col { flex-direction: column; }
+        .justify-between { justify-content: space-between; }
+        .space-y-3 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem; }
+        .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+        .max-w-7xl { max-width: 80rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .whitespace-nowrap { white-space: nowrap; }
+        .border-t { border-top-width: 1px; }
+        .border-gray-800 { border-color: #1f2937; }
+        .fill-none { fill: none; }
+        .stroke-current { stroke: currentColor; }
+        .stroke-2 { stroke-width: 2; }
+        .stroke-linecap-round { stroke-linecap: round; }
+        .stroke-linejoin-round { stroke-linejoin: round; }
+        
+        @media (min-width: 1024px) {
+            .lg\:hidden { display: none; }
+            .lg\:flex { display: flex; }
+            .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+        
+        @media (min-width: 768px) {
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\:flex-row { flex-direction: row; }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #4b5563;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2rem;
+        }
+
+        .job-card {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .job-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+
+        .job-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .job-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-subtitle {
+            font-size: 1.1rem;
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .job-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+
+        .meta-item i {
+            margin-right: 0.8rem;
+            color: #667eea;
+            width: 16px;
+        }
+
+        .job-overview {
+            margin-bottom: 2rem;
+        }
+
+        .job-overview h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+
+        .job-overview p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .responsibilities {
+            margin-bottom: 2rem;
+        }
+
+        .responsibilities h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+
+        .responsibilities ul {
+            list-style: none;
+        }
+
+        .responsibilities li {
+            padding: 0.4rem 0;
+            color: #4a5568;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .responsibilities li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .skills {
+            margin-bottom: 2rem;
+        }
+
+        .skills h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+
+        .skills ul {
+            list-style: none;
+        }
+
+        .skills li {
+            padding: 0.4rem 0;
+            color: #4a5568;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .skills li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+        }
+
+        .apply-section {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .apply-section h3 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .apply-section p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .apply-email {
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            background: rgba(255,255,255,0.2);
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .apply-email:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .jobs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .job-meta {
+                grid-template-columns: 1fr;
+            }
+            
+            .sm\:text-2xl { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4">
+            <div class="relative flex items-center justify-center h-20">
+                <!-- Logo (Absolute positioned to left) -->
+                <a href="homepage.html" class="absolute left-0 flex items-center gap-3 group">
+                    <img src="Logos/Arvya_Logo.png" alt="Arvya Tech Logo" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+                    <span class="text-xl font-bold text-gray-900">Arvya</span>
+                </a>
+
+                <!-- Desktop Navigation (Perfectly Centered) -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="homepage.html" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="services.html" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+                    <a href="about.html" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="careers.html" class="text-blue-600 font-semibold">Careers</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-900 hover:bg-gray-100 rounded-lg transition-colors absolute right-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col gap-4">
+                    <a href="homepage.html" class="text-gray-600 hover:text-blue-600 py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors">Home</a>
+                    <a href="services.html" class="text-gray-600 hover:text-blue-600 py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors">Services</a>
+                    <a href="about.html" class="text-gray-600 hover:text-blue-600 py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors">About</a>
+                    <a href="careers.html" class="text-blue-600 font-semibold py-2 px-4 rounded-lg bg-blue-50">Careers</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-600 py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="header">
+            <h1>Join Our Team</h1>
+            <p>We're hiring talented professionals to build the future of AI technology</p>
+        </div>
+
+        <div class="jobs-grid">
+            <!-- AI Engineer Position -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div class="job-title">AI Engineer</div>
+                    <div class="job-subtitle">(2 to 3+ Years) — SaaS, LLM & RAG</div>
+                </div>
+
+                <div class="job-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Vijayawada / Hybrid</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Full-Time</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-id-badge"></i>
+                        <span>Job ID: 1113</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Start: Immediate</span>
+                    </div>
+                </div>
+
+                <div class="job-overview">
+                    <h3>Role Overview</h3>
+                    <p>We are hiring an AI Engineer with 2–3+ years of experience in building production-grade AI-powered SaaS applications. The ideal candidate can independently design, build, deploy, and scale AI systems using Python, LLMs, RAG, and Azure cloud services.</p>
+                </div>
+
+                <div class="responsibilities">
+                    <h3>Key Responsibilities</h3>
+                    <ul>
+                        <li>Design, build, and maintain AI-driven SaaS applications</li>
+                        <li>Implement LLM and RAG pipelines for document retrieval and querying</li>
+                        <li>Develop scalable backend services using Python (FastAPI/Flask)</li>
+                        <li>Deploy and manage applications using Docker on Azure cloud</li>
+                        <li>Monitor, debug, and optimize production systems</li>
+                    </ul>
+                </div>
+
+                <div class="skills">
+                    <h3>Required Skills</h3>
+                    <ul>
+                        <li>2–3+ years of experience in AI engineering or backend SaaS development</li>
+                        <li>Strong proficiency in Python and API development</li>
+                        <li>Hands-on experience with LLMs, embeddings, and RAG architectures</li>
+                        <li>Experience deploying applications on Azure</li>
+                        <li>Solid understanding of Docker, databases, caching (Redis), and queues</li>
+                    </ul>
+                </div>
+
+                <div class="apply-section">
+                    <h3>How to Apply</h3>
+                    <p>Send your resume and a brief note about a production AI or SaaS project you've worked on</p>
+                    <a href="mailto:info@arvya.in?subject=Application for AI Engineer — Job ID: 1113" class="apply-email">
+                        <i class="fas fa-envelope"></i> info@arvya.in
+                    </a>
+                </div>
+            </div>
+
+            <!-- UI/UX Developer Position -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div class="job-title">UI/UX Developer</div>
+                    <div class="job-subtitle">(2 to 3+ Years) — SaaS & Mobile Apps</div>
+                </div>
+
+                <div class="job-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Vijayawada / Hybrid</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Full-Time</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-id-badge"></i>
+                        <span>Job ID: 1112</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Start: Immediate</span>
+                    </div>
+                </div>
+
+                <div class="job-overview">
+                    <h3>Role Overview</h3>
+                    <p>We are hiring a UI/UX Developer with 2+ years of experience in SaaS and mobile app design. The ideal candidate can create clean, modern interfaces, build scalable design systems, and collaborate with engineering teams.</p>
+                </div>
+
+                <div class="responsibilities">
+                    <h3>Key Responsibilities</h3>
+                    <ul>
+                        <li>Design user flows, wireframes, and high-fidelity UI for SaaS and mobile apps</li>
+                        <li>Build and maintain component-based design systems in Figma</li>
+                        <li>Provide developer-ready assets or UI code (React+TS, Flutter, etc.)</li>
+                        <li>Work closely with product & engineering teams</li>
+                        <li>Conduct usability tests and iterate based on findings</li>
+                    </ul>
+                </div>
+
+                <div class="skills">
+                    <h3>Required Skills</h3>
+                    <ul>
+                        <li>2+ years of UI/UX experience in SaaS/mobile app design</li>
+                        <li>Strong expertise in Figma (Auto Layout, Components, Libraries)</li>
+                        <li>Proficiency in React+TS, Flutter, React Native, SwiftUI, or Jetpack Compose</li>
+                        <li>Solid understanding of UX principles, accessibility, and interaction design</li>
+                        <li>Familiarity with Git and agile workflows</li>
+                    </ul>
+                </div>
+
+                <div class="apply-section">
+                    <h3>How to Apply</h3>
+                    <p>Send your resume + portfolio</p>
+                    <a href="mailto:info@arvya.in?subject=Application for UI/UX Developer — Job ID: 1112" class="apply-email">
+                        <i class="fas fa-envelope"></i> info@arvya.in
+                    </a>
+                </div>
+            </div>
+
+            <!-- Senior AI Engineer Position -->
+            <div class="job-card">
+                <div class="job-header">
+                    <div class="job-title">Senior AI Engineer</div>
+                    <div class="job-subtitle">(5+ Years) — Advanced AI & ML Systems</div>
+                </div>
+
+                <div class="job-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Vijayawada / Hybrid</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Full-Time</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-id-badge"></i>
+                        <span>Job ID: 1114</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Start: Immediate</span>
+                    </div>
+                </div>
+
+                <div class="job-overview">
+                    <h3>Role Overview</h3>
+                    <p>We are seeking a Senior AI Engineer with 5+ years of experience to lead advanced AI/ML projects, architect scalable systems, and mentor junior engineers in building next-generation AI solutions.</p>
+                </div>
+
+                <div class="responsibilities">
+                    <h3>Key Responsibilities</h3>
+                    <ul>
+                        <li>Lead architecture and development of complex AI/ML systems</li>
+                        <li>Design and implement advanced LLM, NLP, and computer vision solutions</li>
+                        <li>Mentor junior engineers and conduct technical reviews</li>
+                        <li>Optimize AI models for production deployment and scalability</li>
+                        <li>Collaborate with stakeholders on AI strategy and roadmap</li>
+                    </ul>
+                </div>
+
+                <div class="skills">
+                    <h3>Required Skills</h3>
+                    <ul>
+                        <li>5+ years of experience in AI/ML engineering and system design</li>
+                        <li>Expertise in deep learning, NLP, computer vision, and MLOps</li>
+                        <li>Strong leadership and mentoring experience</li>
+                        <li>Experience with cloud platforms (Azure, AWS, GCP)</li>
+                        <li>Proven track record of deploying AI systems at scale</li>
+                    </ul>
+                </div>
+
+                <div class="apply-section">
+                    <h3>How to Apply</h3>
+                    <p>Send your resume and details about AI systems you've architected</p>
+                    <a href="mailto:info@arvya.in?subject=Application for Senior AI Engineer — Job ID: 1114" class="apply-email">
+                        <i class="fas fa-envelope"></i> info@arvya.in
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="Logos/Arvya_Logo.png" alt="Arvya Tech Logo" class="w-10 h-10">
+                        <span class="text-lg sm:text-2xl font-bold whitespace-nowrap">Arvya Tech Pvt Ltd</span>
+                    </div>
+                    <p class="text-gray-300 mb-6">Transforming businesses through innovative software solutions and digital excellence.</p>
+                    <div class="flex gap-4">
+                        <a href="javascript:void(0)" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors" aria-label="LinkedIn">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors" aria-label="Twitter">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors" aria-label="GitHub">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Custom Development</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Cloud Solutions</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">AI & Machine Learning</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Mobile Apps</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Cybersecurity</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="careers.html" class="text-gray-300 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-300 hover:text-white transition-colors">Case Studies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Get In Touch</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-blue-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <a href="mailto:info@arvya.in" class="text-gray-300 hover:text-white transition-colors">info@arvya.in</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-blue-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <a href="tel:+919515142062" class="text-gray-300 hover:text-white transition-colors">+91 9515142062</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-blue-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span class="text-gray-300">Vijayawada<br>Andhra Pradesh, India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 text-sm">© 2025 Arvya Tech Solutions. All Rights Reserved.</p>
+                    <div class="flex gap-6 text-sm">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

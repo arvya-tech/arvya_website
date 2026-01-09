@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Arvya Tech Solutions</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="CSS/loader.css" as="style">
+    <link rel="preload" href="js/loader.js" as="script">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="CSS/loader.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    
+    <!-- Immediate loader setup -->
+    <script>
+        document.documentElement.style.overflow = 'hidden';
+    </script>
+</head>
+<body class="bg-background">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
+        <nav class="container-custom">
+            <div class="relative flex items-center justify-center h-20">
+                <!-- Logo (Absolute positioned to left) -->
+                <a href="homepage.html" class="absolute left-0 flex items-center gap-3 group">
+                    <img src="Logos/Arvya_Logo.png" alt="Arvya Tech Logo" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110 mix-blend-multiply">
+                    <span class="text-xl font-bold text-text-primary">Arvya</span>
+                </a>
+
+                <!-- Desktop Navigation (Perfectly Centered) -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-colors">Home</a>
+                    <a href="services.html" class="text-text-secondary hover:text-primary transition-colors">Services</a>
+                    <a href="about.html" class="text-primary font-semibold hover:text-primary-700 transition-colors">About</a>
+                    <a href="careers.html" class="text-text-secondary hover:text-primary transition-colors">Careers</a>
+                    <a href="contact.html" class="text-text-secondary hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-text-primary hover:bg-slate-100 rounded-lg transition-colors absolute right-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4 animate-slide-down">
+                <div class="flex flex-col gap-4">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary py-2 px-4 rounded-lg hover:bg-slate-100 transition-colors">Home</a>
+                    <a href="services.html" class="text-text-secondary hover:text-primary py-2 px-4 rounded-lg hover:bg-slate-100 transition-colors">Services</a>
+                    <a href="about.html" class="text-primary font-semibold py-2 px-4 rounded-lg bg-primary-50">About</a>
+                    <a href="careers.html" class="text-text-secondary hover:text-primary py-2 px-4 rounded-lg hover:bg-slate-100 transition-colors">Careers</a>
+                    <a href="contact.html" class="btn-primary w-full text-center">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section-padding">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold text-text-primary mb-6">About Arvya Tech Solutions</h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">We are a leading software development company dedicated to transforming businesses through innovative technology solutions.</p>
+            </div>
+
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-text-primary mb-12">Our Values</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="card p-8">
+                        <h3 class="text-xl font-semibold text-text-primary mb-4">Innovation</h3>
+                        <p class="text-text-secondary">We constantly push boundaries to deliver cutting-edge solutions.</p>
+                    </div>
+                    <div class="card p-8">
+                        <h3 class="text-xl font-semibold text-text-primary mb-4">Quality</h3>
+                        <p class="text-text-secondary">Excellence in every line of code and every client interaction.</p>
+                    </div>
+                    <div class="card p-8">
+                        <h3 class="text-xl font-semibold text-text-primary mb-4">Partnership</h3>
+                        <p class="text-text-secondary">Building long-term relationships based on trust and results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-secondary-900 text-white py-16">
+        <div class="container-custom text-center">
+            <p class="text-secondary-400">© 2025 Arvya Tech Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/loader.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.documentElement.style.overflow = '';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
