@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nyaya - Paralegal Assistant for Lawyers. Instant, secure, yours. AI-powered legal solutions by Arvya Tech Ltd.">
+    <title>Nyaya - Paralegal Assistant for Lawyers | Arvya Tech Solutions</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="CSS/loader.css" as="style">
+    <link rel="preload" href="js/loader.js" as="script">
+    
+    <!-- Modern CSS Framework -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="CSS/loader.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/modern-effects.css">
+    
+    <!-- Modern Meta Tags -->
+    <meta name="theme-color" content="#1E40AF">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+    <!-- Immediate loader setup -->
+    <script>
+        document.documentElement.style.overflow = 'hidden';
+    </script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-sm">
+        <nav class="container-custom">
+            <div class="relative flex items-center justify-center h-20">
+                <!-- Logo (Absolute positioned to left) -->
+                <a href="homepage.html" class="absolute left-0 flex items-center gap-3 group">
+                    <img src="Logos/Arvya_Logo.png" alt="Arvya Tech Logo" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+                    <span class="text-xl font-bold text-text-primary">Arvya Tech</span>
+                </a>
+
+                <!-- Desktop Navigation (Perfectly Centered) -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-colors">Home</a>
+                    <a href="services.html" class="text-text-secondary hover:text-primary transition-colors">Services</a>
+                    <a href="about.html" class="text-text-secondary hover:text-primary transition-colors">About</a>
+                    <a href="nyaya.html" class="text-primary font-semibold hover:text-primary-700 transition-colors">Nyaya</a>
+                    <a href="careers.html" class="text-text-secondary hover:text-primary transition-colors">Careers</a>
+                    <a href="contact.html" class="text-text-secondary hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-text-primary hover:bg-slate-100 rounded-lg transition-colors absolute right-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4 animate-slide-down">
+                <div class="flex flex-col gap-4">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary py-2 px-4 rounded-lg hover:bg-slate-100 transition-colors">Home</a>
+                    <a href="services.html" class="text-text-secondary hover:text-primary py-2 px-4 rounded-lg hover:bg-slate-100 transition-colors">Services</a>
+                    <a href="about.html" class="text-text-secondary hover:text-primary py-2 px-4 rounded-lg hover:bg-slate-100 transition-colors">About</a>
+                    <a href="nyaya.html" class="text-primary font-semibold py-2 px-4 rounded-lg bg-primary-50">Nyaya</a>
+                    <a href="careers.html" class="text-text-secondary hover:text-primary py-2 px-4 rounded-lg hover:bg-slate-100 transition-colors">Careers</a>
+                    <a href="contact.html" class="btn-primary w-full text-center">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div class="container-custom relative">
+            <div class="text-center py-20 lg:py-32">
+                <div class="space-y-8 animate-slide-up">
+                    <div class="space-y-6">
+                        <h1 class="text-6xl lg:text-8xl font-black text-blue-600 leading-tight">
+                            Nyaya
+                        </h1>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-blue-800">
+                            Paralegal Assistant for Lawyers
+                        </h2>
+                        <p class="text-2xl text-blue-700 font-medium">
+                            AI-Powered Legal Intelligence Platform
+                        </p>
+                        <div class="w-32 h-1 bg-gradient-to-r from-blue-400 to-indigo-600 rounded-full mx-auto"></div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center mt-12">
+                        <a href="contact.html" class="btn-primary text-lg px-8 py-4">
+                            <i class="fas fa-rocket mr-2"></i>
+                            Get Started Today
+                        </a>
+                        <a href="#features" class="btn bg-white text-primary border-2 border-primary hover:bg-primary-50 text-lg px-8 py-4">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Empowering Law Firms Section -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary mb-6">Empowering Indian Law Firms with Nyaya AI</h2>
+                <p class="text-xl text-text-secondary max-w-4xl mx-auto">We're building an intelligent platform that revolutionizes how law firms operate, combining traditional legal expertise with cutting-edge artificial intelligence.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Efficient Case Management -->
+                <div class="card-elevated text-center p-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tasks text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-4">Efficient Case Management</h3>
+                    <p class="text-text-secondary">Streamline workflows and track cases with intelligent automation</p>
+                </div>
+
+                <!-- Enhanced Document Drafting -->
+                <div class="card-elevated text-center p-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-file-alt text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-4">Enhanced Document Drafting</h3>
+                    <p class="text-text-secondary">Create better legal documents faster with AI-powered assistance</p>
+                </div>
+
+                <!-- Instant Legal Research -->
+                <div class="card-elevated text-center p-6">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-search text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-4">Instant Legal Research</h3>
+                    <p class="text-text-secondary">Find relevant precedents and case law in seconds, not hours</p>
+                </div>
+
+                <!-- Data-Driven Insights -->
+                <div class="card-elevated text-center p-6">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-chart-bar text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-4">Data-Driven Insights</h3>
+                    <p class="text-text-secondary">Make strategic decisions backed by comprehensive analytics</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 p-8 bg-primary-50 rounded-2xl">
+                <p class="text-lg text-primary font-semibold">Our Goal: Create a foundation for the future of legal practice in India, where technology amplifies human expertise rather than replacing it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Architecture Section -->
+    <section id="features" class="section-padding bg-gradient-to-br from-slate-50 to-white">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary mb-6">Nyaya Features</h2>
+                <p class="text-xl text-text-secondary max-w-4xl mx-auto">Our platform delivers ten integrated capabilities designed to revolutionize every aspect of legal case management and knowledge work</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Feature 1 -->
+                <div class="card-elevated p-6 flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">01</div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-text-primary mb-2">User Authentication & Secure Access</h3>
+                        <p class="text-text-secondary">Multi-factor authentication with role-based permissions ensuring data security</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-elevated p-6 flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">02</div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-text-primary mb-2">Case Categories</h3>
+                        <p class="text-text-secondary">Eight major categories with intelligent subtypes for precise organization</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-elevated p-6 flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">03</div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-text-primary mb-2">Document Repository</h3>
+                        <p class="text-text-secondary">Centralized storage for Word and PDF documents with version control</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="card-elevated p-6 flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">04</div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-text-primary mb-2">Smart Search Engine</h3>
+                        <p class="text-text-secondary">Advanced keyword and metadata search capabilities for instant retrieval</p>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="card-elevated p-6 flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">05</div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-text-primary mb-2">Judgment Summary & Notes</h3>
+                        <p class="text-text-secondary">AI-generated summaries with structured note-building tools</p>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="card-elevated p-6 flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">06</div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-text-primary mb-2">Case Reference Intelligence</h3>
+                        <p class="text-text-secondary">Automatic suggestions for relevant precedents and case reuse opportunities</p>
+                    </div>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="card-elevated p-6 flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">07</div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-text-primary mb-2">AI Draft Generation</h3>
+                        <p class="text-text-secondary">Legal phrasing optimization with context-aware content creation</p>
+                    </div>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="card-elevated p-6 flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">08</div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-text-primary mb-2">Clause Reuse System</h3>
+                        <p class="text-text-secondary">Smart extraction and adaptation of proven language from previous cases</p>
+                    </div>
+                </div>
+
+                <!-- Feature 9 -->
+                <div class="card-elevated p-6 flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">09</div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-text-primary mb-2">Voice Assessment AI</h3>
+                        <p class="text-text-secondary">Real-time feedback on presentation delivery and verbal argumentation</p>
+                    </div>
+                </div>
+
+                <!-- Feature 10 -->
+                <div class="card-elevated p-6 flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">10</div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-text-primary mb-2">Analytics Dashboard</h3>
+                        <p class="text-text-secondary">Comprehensive insights on productivity, case outcomes, and team performance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Built for Legal Teams Section -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary mb-6">Built for Legal Teams</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- User Roles -->
+                <div>
+                    <h3 class="text-2xl font-bold text-text-primary mb-8">Three Specialized User Roles</h3>
+                    <div class="space-y-6">
+                        <!-- Advocates -->
+                        <div class="card-elevated p-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-gavel text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-text-primary mb-2">Advocates</h4>
+                                    <p class="text-text-secondary">Senior lawyers with full case management authority, client oversight, and strategic decision-making capabilities</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Assistants -->
+                        <div class="card-elevated p-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-user-tie text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-text-primary mb-2">Assistants</h4>
+                                    <p class="text-text-secondary">Junior lawyers and paralegals with document preparation, research, and case support responsibilities</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Administrators -->
+                        <div class="card-elevated p-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-cog text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-text-primary mb-2">Administrators</h4>
+                                    <p class="text-text-secondary">Firm managers controlling user access, system configuration, and organizational settings</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Features -->
+                <div>
+                    <h3 class="text-2xl font-bold text-text-primary mb-8">Enterprise-Grade Security</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Firm-Specific Authentication</h4>
+                                <p class="text-text-secondary">Customized access controls for each organization</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-lock text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">End-to-End Encryption</h4>
+                                <p class="text-text-secondary">All data protected with industry standard encryption</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-cloud text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Cloud Infrastructure</h4>
+                                <p class="text-text-secondary">Reliable hosting with SSL protection and daily backups</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <!-- CTA Section -->
+    <section class="section-padding bg-gradient-to-br from-primary to-primary-900 text-white relative overflow-hidden">
+        <div class="container-custom relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">Thank You</h2>
+                <p class="text-2xl mb-8 text-primary-100">Let's revolutionize legal practice together.</p>
+                <div class="space-y-6">
+                    <p class="text-xl font-semibold">Want to talk?</p>
+                    <a href="mailto:info@arvya.in" class="inline-flex items-center gap-3 text-2xl font-bold text-white hover:text-primary-200 transition-colors">
+                        <i class="fas fa-envelope"></i>
+                        info@arvya.in
+                    </a>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+                    <a href="contact.html" class="btn bg-white text-primary hover:bg-primary-50 text-lg px-8 py-4 shadow-xl">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Schedule a Demo
+                    </a>
+                    <a href="services.html" class="btn btn-outline border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4">
+                        <i class="fas fa-cogs mr-2"></i>
+                        Explore Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white">
+        <div class="container-custom py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="Logos/Arvya_Logo.png" alt="Arvya Tech Logo" class="w-10 h-10">
+                        <span class="text-lg sm:text-2xl font-bold whitespace-nowrap">Arvya Tech Pvt Ltd</span>
+                    </div>
+                    <p class="text-secondary-300 mb-6">Transforming businesses through innovative software solutions and digital excellence.</p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-secondary-300 hover:text-white transition-colors">Custom Development</a></li>
+                        <li><a href="services.html" class="text-secondary-300 hover:text-white transition-colors">AI Solutions</a></li>
+                        <li><a href="nyaya.html" class="text-secondary-300 hover:text-white transition-colors">Nyaya Legal AI</a></li>
+                        <li><a href="services.html" class="text-secondary-300 hover:text-white transition-colors">Cloud Solutions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-secondary-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="careers.html" class="text-secondary-300 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-secondary-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Get In Touch</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope text-primary mt-1"></i>
+                            <a href="mailto:info@arvya.in" class="text-secondary-300 hover:text-white transition-colors">info@arvya.in</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone text-primary mt-1"></i>
+                            <a href="tel:+919515142062" class="text-secondary-300 hover:text-white transition-colors">+91 9515142062</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <span class="text-secondary-300">The Herbt's Square building, 7th Floor<br>APIIC I.T Park, Mangalagiri<br>AMARAVATI-522503, AP</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="divider border-secondary-800"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8">
+                <p class="text-secondary-400 text-sm">© 2025 Arvya Tech Solutions. All Rights Reserved.</p>
+                <div class="flex gap-6 text-sm">
+                    <a href="privacy-policy.html" class="text-secondary-400 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-secondary-400 hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/loader.js"></script>
+    <script src="js/cookie-consent.js"></script>
+    <script src="js/modern-effects.js"></script>
+    
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Re-enable scrolling after loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.documentElement.style.overflow = '';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
