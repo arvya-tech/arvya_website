@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Arvya Tech Solutions</title>
+    <link rel="icon" type="image/png" href="Logos/Arvya_Logo.png">
     
     <!-- Preload critical resources -->
     <link rel="preload" href="CSS/loader.css" as="style">
@@ -25,7 +26,7 @@
                 <!-- Logo (Absolute positioned to left) -->
                 <a href="homepage.html" class="absolute left-0 flex items-center gap-3 group">
                     <img src="Logos/Arvya_Logo.png" alt="Arvya Tech Logo" class="w-10 h-10 transition-transform duration-300 group-hover:scale-110 mix-blend-multiply">
-                    <span class="text-xl font-bold text-text-primary">Arvya</span>
+                    <span class="text-xl font-bold text-text-primary">Arvya Tech</span>
                 </a>
 
                 <!-- Desktop Navigation (Perfectly Centered) -->
@@ -95,7 +96,14 @@
     
     <!-- Scripts -->
     <script src="js/loader.js"></script>
+    <script src="js/cookie-consent.js"></script>
     <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.documentElement.style.overflow = '';
